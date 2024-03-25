@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.Configure<UsuariosDatabaseSettings>(
-    builder.Configuration.GetSection("UsuarioDb")
+    builder.Configuration.GetSection("UsuariosDatabase")
 );
 builder.Services.AddSingleton<UsuariosService>();
 

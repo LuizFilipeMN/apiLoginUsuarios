@@ -22,6 +22,9 @@ namespace apiLoginUsuarios.Services
         public async Task<Usuario?> GetAsync(string id) =>
             await _usuariosCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
+        public async Task<Usuario?> GetAsyncByEmail(string email) =>
+            await _usuariosCollection.Find(x => x.Email == email).FirstOrDefaultAsync();
+
         public async Task CreateAsync(Usuario newUsuario) =>
             await _usuariosCollection.InsertOneAsync(newUsuario);
 
