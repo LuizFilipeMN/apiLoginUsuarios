@@ -15,6 +15,7 @@ namespace apiLoginUsuarios.Models
         public string SenhaLembrete { get; set; } = null!;
         public int Codigo { get; set; }
         public int Idade { get; set; }
+        public string? Telefone { get; set; }
         public string? Sexo { get; set; } = null!;
     }
 }
